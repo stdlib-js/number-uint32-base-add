@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-uint32-base-add
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-add = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-uint32-base-add@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var add = require( 'path/to/vendor/umd/number-uint32-base-add/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-uint32-base-add@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.add;
-})();
-</script>
+var add = require( '@stdlib/number-uint32-base-add' );
 ```
 
 #### add( x, y )
@@ -84,13 +78,13 @@ If no recognized module system is present, access bundle contents via the global
 Computes the sum of two unsigned 32-bit integers.
 
 ```javascript
-var v = add( 1, 5 );
+var v = add( 1>>>0, 5>>>0 );
 // returns 6
 
-v = add( 2, 5 );
+v = add( 2>>>0, 5>>>0 );
 // returns 7
 
-v = add( 0, 5 );
+v = add( 0>>>0, 5>>>0 );
 // returns 5
 ```
 
@@ -118,15 +112,10 @@ v = add( 0, 5 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-uint32-base-add@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var add = require( '@stdlib/number-uint32-base-add' );
 
 var opts = {
     'dtype': 'uint32'
@@ -138,11 +127,6 @@ var y = discreteUniform( 100, 0, 50, opts );
 
 // Perform element-wise addition:
 logEachMap( '%d + %d = %d', x, y, add );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -151,7 +135,93 @@ logEachMap( '%d + %d = %d', x, y, add );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/number/uint32/base/add.h"
+```
+
+#### stdlib_base_uint32_add( x, y )
+
+Computes the sum of two unsigned 32-bit integers.
+
+```c
+#include <stdint.h>
+
+uint32_t v = stdlib_base_uint32_add( 5, 2 );
+// returns 7
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] uint32_t` first input value.
+-   **y**: `[in] uint32_t` second input value.
+
+```c
+uint32_t stdlib_base_uint32_add( const uint32_t x, const uint32_t y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/number/uint32/base/add.h"
+#include <stdint.h>
+#include <stdio.h>
+
+int main( void ) {
+    const uint32_t x[] = { 3, 5, 10, 12 };
+    const uint32_t y[] = { 6, 2, 11, 24 };
+
+    uint32_t z;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        z = stdlib_base_uint32_add( x[ i ], y[ i ] );
+        printf( "%u + %u = %u\n", x[ i ], y[ i ], z );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
