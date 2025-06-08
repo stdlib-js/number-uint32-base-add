@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`6803252`](https://github.com/stdlib-js/stdlib/commit/68032524e51f5f6b82e06e13253836ec5a539c40) - **build:** add package meta data _(by Athan Reines)_
 -   [`5572fe5`](https://github.com/stdlib-js/stdlib/commit/5572fe564738f6def14cb6e1d8c0c39358f805a5) - **chore:** add notes and clean-up _(by Athan Reines)_
 -   [`8c4b38b`](https://github.com/stdlib-js/stdlib/commit/8c4b38bea72599bed101a3a38a4f4ed05c003570) - **feat:** add `number/uint32/base/add` _(by Athan Reines)_
 
