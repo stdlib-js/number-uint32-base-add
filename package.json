@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/number-uint32-base-add",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compute the sum of two unsigned 32-bit integers.",
   "license": "Apache-2.0",
   "author": {
