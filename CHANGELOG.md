@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-25)
+## Unreleased (2026-06-15)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`62beca8`](https://github.com/stdlib-js/stdlib/commit/62beca8077139cf631be5a8909cf935e823b5531) - **chore:** update keywords [(#12831)](https://github.com/stdlib-js/stdlib/pull/12831) _(by Philipp Burckhardt)_
 -   [`fe2eec4`](https://github.com/stdlib-js/stdlib/commit/fe2eec4417d858b83b208929a4bbac3d9d236fa4) - **bench:** refactor to use string interpolation in `number` [(#11603)](https://github.com/stdlib-js/stdlib/pull/11603) _(by Karan Anand)_
 
 </details>
@@ -24,9 +25,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Karan Anand
+-   Philipp Burckhardt
 
 </section>
 
